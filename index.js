@@ -1,4 +1,4 @@
-import _throttle from 'lodash/throttle';
+const _throttle = require('lodash/throttle');
 
 class ScrollSpy {
 
