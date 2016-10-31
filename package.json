@@ -1,5 +1,5 @@
 {
-  "name": "@ryanpotternz/project-name",
+  "name": "@ryanpotternz/scroll-spy",
   "version": "1.0.1",
   "description": "ES6 module for detecting element position relative to scroll window.",
   "main": "index.js",
