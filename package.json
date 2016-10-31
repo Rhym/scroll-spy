@@ -1,0 +1,15 @@
+{
+  "name": "@username/project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Ryan Potter <contact@ryanpotter.co.nz> (http://ryanpotter.co.nz/)",
+  "bugs": {
+    "url": "https://github.com/Rhym/scroll-spy/issues",
+    "email": "contact@ryanpotter.co.nz"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.16.5"
+  }
+}
