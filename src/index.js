@@ -5,13 +5,13 @@ class ScrollSpy {
   /**
    * @param elements string Optional specified class to target.
    */
-  constructor(elements) {
+  constructor(elements = 'js-scroll-spy') {
     this.throttleSpeed     = 200;
     this.scrollPosY        = 0;
     this.currentScrollPosY = 0;
     this.onTop             = true;
     this.scrollOffsetY     = 1; // toggle style / class when scrolling below this position (in px)
-    this.elements          = document.getElementsByClassName((typeof elements !== 'undefined') ? elements : 'js-scroll-spy');
+    this.elements          = document.getElementsByClassName(elements);
     this.classes           = {
       above: 'js-is-above',
       below: 'js-is-below',
@@ -103,4 +103,4 @@ class ScrollSpy {
 
 }
 
-export default ScrollSpy;
+export default (elements) => new ScrollSpy(elements);
