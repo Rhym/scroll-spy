@@ -2,13 +2,16 @@ const _throttle = require('lodash/throttle');
 
 class ScrollSpy {
 
-  constructor() {
+  /**
+   * @param elements string Optional specified class to target.
+   */
+  constructor(elements) {
     this.throttleSpeed     = 200;
     this.scrollPosY        = 0;
     this.currentScrollPosY = 0;
     this.onTop             = true;
     this.scrollOffsetY     = 1; // toggle style / class when scrolling below this position (in px)
-    this.elements          = document.getElementsByClassName('js-scroll-spy');
+    this.elements          = document.getElementsByClassName((typeof elements !== 'undefined') ? elements : 'js-scroll-spy');
     this.classes           = {
       above: 'js-is-above',
       below: 'js-is-below',
