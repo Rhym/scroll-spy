@@ -11,7 +11,8 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel', // 'babel-loader' is also a valid name to reference
         query: {
-          presets: ['es2015']
+          presets: ['es2015'],
+          plugins: ['add-module-exports']
         }
       }
     ]

@@ -103,4 +103,4 @@ class ScrollSpy {
 
 }
 
-module.exports = ScrollSpy;
+export default ScrollSpy;
