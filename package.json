@@ -1,6 +1,6 @@
 {
   "name": "@ryanpotternz/scroll-spy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ES6 module for detecting element position relative to scroll window.",
   "main": "bundle.js",
   "author": "Ryan Potter <contact@ryanpotter.co.nz> (http://ryanpotter.co.nz/)",

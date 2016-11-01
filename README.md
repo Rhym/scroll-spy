@@ -7,7 +7,8 @@ Usage
 -----
 
 ```javascript
-const ScrollSpy = require('@ryanpotternz/scroll-spy/index');
+import ScrollSpy from '@ryanpotternz/scroll-spy';
+
 const ScrollSpyInstance = new ScrollSpy();
 ```
 
