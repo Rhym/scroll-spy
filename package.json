@@ -1,24 +1,29 @@
 {
   "name": "@ryanpotternz/scroll-spy",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "ES6 module for detecting element position relative to scroll window.",
-  "main": "bundle.js",
+  "homepage": "https://github.com/Rhym/scroll-spy/",
+  "main": "dist/scroll-spy.min.js",
   "author": "Ryan Potter <contact@ryanpotter.co.nz> (http://ryanpotter.co.nz/)",
   "bugs": {
     "url": "https://github.com/Rhym/scroll-spy/issues",
     "email": "contact@ryanpotter.co.nz"
   },
   "scripts": {
-    "production": "webpack --progress --colors"
+    "production": "NODE_ENV=production webpack -p"
   },
   "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "dependencies": {
     "lodash": "^4.16.5"
   },
   "devDependencies": {
     "babel-core": "^6.18.0",
     "babel-loader": "^6.2.7",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
     "webpack": "^1.13.3"
   }
