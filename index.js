@@ -100,4 +100,4 @@ class ScrollSpy {
 
 }
 
-export default ScrollSpy;
+module.exports = ScrollSpy;
