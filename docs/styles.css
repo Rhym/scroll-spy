@@ -4,7 +4,14 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -20,14 +27,49 @@ h1 {
     margin: .67em 0
 }
 
-.container {
-    width: 1200px;
+.header {
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transform: translateZ(0);
+}
+
+.js-is-scrolled .header {
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.header h1 {
+    width: 100%;
     margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .header h1 {
+        width: 1200px;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 1rem 0 1rem;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        padding: 5rem 0 0;
+    }
 }
 
 .item {
     background: rgba(0, 0, 0, 0.2);
-    min-height: 200px;
+    min-height: 100px;
     transition: 200ms ease background-color;
 }
 
