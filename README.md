@@ -1,6 +1,8 @@
 Scroll Spy
 ==========
 
+[![npm version](https://badge.fury.io/js/%40ryanpotternz%2Fscroll-spy.svg)](https://badge.fury.io/js/%40ryanpotternz%2Fscroll-spy)
+
 Add classes to an object based on it's position in the window.
 
 Syntax
