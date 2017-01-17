@@ -8,8 +8,6 @@ class ScrollSpy {
   constructor(elements = 'js-scroll-spy') {
     if (typeof window === 'undefined') return;
 
-    this.windowHeight      = window.innerHeight;
-    this.scrollPosY        = 0;
     this.currentScrollPosY = 0;
     this.elements          = document.getElementsByClassName(elements);
     this.classes           = {
@@ -25,8 +23,7 @@ class ScrollSpy {
     document.addEventListener('DOMContentLoaded', () => {
       // Defer initialization to allow browser to restore scroll position
       window.setTimeout(() => {
-        this.scrollPosY = window.pageYOffset;
-        window.requestAnimationFrame(this.toggleElementClasses.bind(this));
+        this.handleScroll();
       }, 0);
     });
 
@@ -35,7 +32,7 @@ class ScrollSpy {
     }, 200));
 
     window.addEventListener('resize', throttle(() => {
-      this.windowHeight = window.innerHeight;
+      this.handleScroll();
     }, 200));
   }
 
@@ -43,7 +40,7 @@ class ScrollSpy {
    * @desc Assign the appropriate class to the element based on it's position to the window.
    */
   toggleElementClasses() {
-    const windowBottomPosition = this.currentScrollPosY + this.windowHeight;
+    const windowBottomPosition = this.currentScrollPosY + window.innerHeight;
     for (let i = 0; this.elements[i]; i += 1) {
       const element        = this.elements[i];
       const height         = element.offsetHeight;
@@ -72,13 +69,13 @@ class ScrollSpy {
   toggleBodyClasses() {
     const body = document.body;
     // If the body has been scrolled
-    if (this.scrollPosY !== 0) {
+    if (window.pageYOffset !== 0) {
       body.classList.add(this.classes.scrolled);
     } else {
       body.classList.remove(this.classes.scrolled);
     }
     // Set the direction of the scroll
-    if (this.currentScrollPosY >= this.scrollPosY) {
+    if (this.currentScrollPosY >= window.pageYOffset) {
       body.classList.add(this.classes.scrollUp);
       body.classList.remove(this.classes.scrollDown);
     } else {
@@ -93,7 +90,6 @@ class ScrollSpy {
    * @desc Handle when a user scrolls.
    */
   handleScroll() {
-    this.scrollPosY = window.pageYOffset;
     window.requestAnimationFrame(this.toggleBodyClasses.bind(this));
     window.requestAnimationFrame(this.toggleElementClasses.bind(this));
   }
