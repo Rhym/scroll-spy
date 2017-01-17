@@ -1,3 +1,3 @@
 import ScrollSpy from './scroll-spy';
 
-ScrollSpy();
+ScrollSpy('js-scroll-spy');

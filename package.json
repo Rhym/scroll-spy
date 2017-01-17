@@ -1,6 +1,6 @@
 {
   "name": "@ryanpotternz/scroll-spy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ES6 module for detecting element position relative to scroll window.",
   "homepage": "https://github.com/Rhym/scroll-spy/",
   "main": "dist/scroll-spy.min.js",
