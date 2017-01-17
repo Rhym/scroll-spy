@@ -73,7 +73,7 @@ class ScrollSpy {
   toggleBodyClasses() {
     const body = document.body;
     // If the body has been scrolled
-    if (window.pageYOffset !== 0) {
+    if (window.pageYOffset > 0) {
       body.classList.add(this.classes.scrolled);
     } else {
       body.classList.remove(this.classes.scrolled);
