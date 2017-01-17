@@ -29,11 +29,11 @@ class ScrollSpy {
 
     window.addEventListener('scroll', throttle(() => {
       this.handleScroll();
-    }, 200));
+    }, 100));
 
     window.addEventListener('resize', throttle(() => {
       this.handleScroll();
-    }, 200));
+    }, 100));
   }
 
   /**
