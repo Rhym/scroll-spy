@@ -1,0 +1,48 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 200px;
+    transition: 200ms ease background-color;
+}
+
+.item + .item {
+    margin-top: 1rem;
+}
+
+.item.js-is-visible {
+    background: #8BC34A;
+}
+
+.item.js-is-above {
+    background: #E91E63;
+}
+
+.item.js-is-below {
+    background: #2196F3;
+}
