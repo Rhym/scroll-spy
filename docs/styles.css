@@ -24,7 +24,6 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 
 h1 {
     font-size: 2em;
-    margin: .67em 0
 }
 
 .header {
@@ -46,11 +45,13 @@ h1 {
 .header h1 {
     width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 @media (min-width: 1200px) {
     .header h1 {
         width: 1200px;
+        padding: 0;
     }
 }
 
