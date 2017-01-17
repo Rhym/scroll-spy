@@ -49,16 +49,20 @@ class ScrollSpy {
 
       if ((offset >= this.currentScrollPosY && offset <= windowBottomPosition) || (bottomPosition >= this.currentScrollPosY && bottomPosition <= windowBottomPosition)) {
         // If bottom position is within the current window
-        element.classList.add(this.classes.seen, this.classes.visible);
-        element.classList.remove(this.classes.above, this.classes.below);
+        element.classList.add(this.classes.seen);
+        element.classList.add(this.classes.visible);
+        element.classList.remove(this.classes.above);
+        element.classList.remove(this.classes.below);
       } else if (bottomPosition <= this.currentScrollPosY) {
         // If bottom position is above the current window
         element.classList.add(this.classes.above);
-        element.classList.remove(this.classes.below, this.classes.visible);
+        element.classList.remove(this.classes.below);
+        element.classList.remove(this.classes.visible);
       } else {
         // If bottom position is below the current window view
         element.classList.add(this.classes.below);
-        element.classList.remove(this.classes.above, this.classes.visible);
+        element.classList.remove(this.classes.above);
+        element.classList.remove(this.classes.visible);
       }
     }
   }
