@@ -1,6 +1,6 @@
 {
   "name": "@ryanpotternz/scroll-spy",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "ES6 module for detecting element position relative to scroll window.",
   "homepage": "https://github.com/Rhym/scroll-spy/",
   "main": "dist/scroll-spy.min.js",
@@ -10,8 +10,8 @@
     "email": "contact@ryanpotter.co.nz"
   },
   "scripts": {
-    "production": "./node_modules/.bin/eslint ./src/** && NODE_ENV=production webpack -p && node ./commands/post-production.js",
-    "lint": "./node_modules/.bin/eslint ./src/**"
+    "test": "./node_modules/.bin/eslint ./src/**",
+    "production": "./node_modules/.bin/eslint ./src/** && NODE_ENV=production webpack -p && node ./commands/post-production.js"
   },
   "license": "ISC",
   "babel": {
