@@ -1,6 +1,6 @@
 #Scroll Spy
 
-[![Travis branch](https://img.shields.io/travis/Rhym/scroll-spy/master.svg?style=flat-square)]()
+[![Build Status](https://travis-ci.org/Rhym/scroll-spy.svg?branch=master)](https://travis-ci.org/Rhym/scroll-spy)
 
 > Add classes to an object based on it's position in the window.
 
